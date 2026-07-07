@@ -13,9 +13,14 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b border-line/60 bg-bg/70 backdrop-blur-xl">
       <Container className="flex h-[68px] items-center justify-between">
         <Link href="/" className="flex items-center gap-2.5">
-          <span className="flex h-7 w-7 items-center justify-center rounded-[8px] bg-primary shadow-[0_0_0_1px_rgba(45,189,110,0.25),0_4px_14px_-4px_rgba(45,189,110,0.55)]">
-            <span className="h-2.5 w-2.5 rounded-[2px] bg-bg" />
-          </span>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/logo-nexfit.svg"
+            alt="Nex Fit"
+            width={16}
+            height={32}
+            className="h-8 w-auto"
+          />
           <span className="font-display text-[15px] font-semibold tracking-tight">
             Nex Fit
           </span>

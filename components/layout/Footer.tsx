@@ -34,9 +34,14 @@ export default function Footer() {
         <div className="grid grid-cols-2 gap-10 md:grid-cols-5">
           <div className="col-span-2">
             <div className="flex items-center gap-2">
-              <span className="flex h-7 w-7 items-center justify-center rounded-[7px] bg-primary">
-                <span className="h-2.5 w-2.5 rounded-[2px] bg-bg" />
-              </span>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/logo-nexfit.svg"
+                alt="Nex Fit"
+                width={16}
+                height={32}
+                className="h-8 w-auto"
+              />
               <span className="font-display text-[15px] font-semibold">
                 Nex Fit
               </span>
