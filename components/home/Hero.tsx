@@ -2,6 +2,7 @@ import Container from "../layout/Container";
 import CTAButton, { TextCTA } from "../ui/CTAButton";
 import EvolutionRing from "./EvolutionRing";
 import HeroSpotlight from "./HeroSpotlight";
+import Magnetic from "../ui/Magnetic";
 
 export default function Hero() {
   return (
@@ -9,6 +10,10 @@ export default function Hero() {
       <div
         aria-hidden
         className="glow-primary pointer-events-none absolute inset-x-0 top-0 h-[520px]"
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-bg"
       />
 
       <HeroSpotlight>
@@ -27,7 +32,7 @@ export default function Hero() {
               </span>
 
               <h1
-                className="mt-8 animate-fadeUp text-balance font-display text-[44px] font-semibold leading-[1.04] tracking-[-0.02em] text-ink opacity-0 md:text-[76px]"
+                className="mt-8 animate-fadeUp text-balance font-display text-[clamp(2.75rem,2.1rem+3.2vw,4.75rem)] font-semibold leading-[1.04] tracking-[-0.02em] text-ink opacity-0"
                 style={{ animationDelay: "200ms" }}
               >
                 Seu treino
@@ -36,7 +41,7 @@ export default function Hero() {
               </h1>
 
               <p
-                className="mt-7 max-w-[420px] animate-fadeUp text-[17px] leading-relaxed text-ink-soft opacity-0 md:text-[18px]"
+                className="mt-7 max-w-[420px] animate-fadeUp text-[clamp(1rem,0.93rem+0.35vw,1.125rem)] leading-relaxed text-ink-soft opacity-0"
                 style={{ animationDelay: "340ms" }}
               >
                 Nex Fit identifica o momento exato em que seu progresso trava
@@ -49,9 +54,11 @@ export default function Hero() {
                 style={{ animationDelay: "460ms" }}
                 id="baixar"
               >
-                <CTAButton href="#" variant="primary">
-                  Baixar na App Store
-                </CTAButton>
+                <Magnetic>
+                  <CTAButton href="#" variant="primary">
+                    Baixar na App Store
+                  </CTAButton>
+                </Magnetic>
                 <TextCTA href="#">Ver no Google Play</TextCTA>
               </div>
 

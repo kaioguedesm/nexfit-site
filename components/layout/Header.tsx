@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useRef } from "react";
 import Link from "next/link";
 import Container from "./Container";
 
@@ -9,8 +12,29 @@ const NAV_LINKS = [
 ];
 
 export default function Header() {
+  const headerRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    function onScroll() {
+      const node = headerRef.current;
+      if (!node) return;
+      if (window.scrollY > 8) {
+        node.dataset.scrolled = "true";
+      } else {
+        node.dataset.scrolled = "false";
+      }
+    }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className="sticky top-0 z-50 border-b border-line/60 bg-bg/70 backdrop-blur-xl">
+    <header
+      ref={headerRef}
+      data-scrolled="false"
+      className="sticky top-0 z-50 border-b border-transparent bg-bg/70 backdrop-blur-xl transition-[border-color,box-shadow] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] data-[scrolled=true]:border-line/60 data-[scrolled=true]:shadow-[0_1px_0_rgba(12,18,16,0.04),0_12px_24px_-20px_rgba(12,18,16,0.25)]"
+    >
       <Container className="flex h-[68px] items-center justify-between">
         <Link href="/" className="flex items-center gap-2.5">
           {/* eslint-disable-next-line @next/next/no-img-element */}

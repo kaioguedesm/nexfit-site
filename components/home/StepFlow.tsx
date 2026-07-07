@@ -30,7 +30,7 @@ export default function StepFlow() {
           <p className="font-mono text-[12px] uppercase tracking-wide text-primary">
             Como funciona
           </p>
-          <h2 className="mt-4 text-balance font-display text-[32px] font-semibold tracking-tight text-bg md:text-[40px]">
+          <h2 className="mt-4 text-balance font-display text-[clamp(1.75rem,1.4rem+1.6vw,2.5rem)] font-semibold tracking-tight text-bg">
             Da série de hoje ao ajuste de amanhã.
           </h2>
         </div>

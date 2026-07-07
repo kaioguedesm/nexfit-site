@@ -17,7 +17,7 @@ export default function Section({
   return (
     <section
       id={id}
-      className={`relative py-28 md:py-40 ${
+      className={`relative py-[clamp(5rem,4rem+6vw,10rem)] ${
         dark ? "bg-bg-deep text-bg" : ""
       } ${className}`}
     >

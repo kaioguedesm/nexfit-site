@@ -3,6 +3,7 @@ import { Manrope, Inter, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import ScrollProgress from "@/components/ui/ScrollProgress";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -80,6 +81,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className={`${manrope.variable} ${inter.variable} ${plexMono.variable}`}>
       <body>
+        <ScrollProgress />
         <div
           aria-hidden
           className="grain-overlay pointer-events-none fixed inset-0 z-[100]"

@@ -12,7 +12,7 @@ export default function FinalCTA() {
             className="glow-primary pointer-events-none absolute inset-x-0 top-0 h-[300px] opacity-70"
           />
           <div className="relative">
-            <h2 className="max-w-[520px] text-balance font-display text-[30px] font-semibold tracking-tight text-ink md:text-[42px]">
+            <h2 className="max-w-[520px] text-balance font-display text-[clamp(1.875rem,1.5rem+1.7vw,2.625rem)] font-semibold tracking-tight text-ink">
               Pare de treinar no automático.
             </h2>
             <p className="mx-auto mt-5 max-w-[420px] text-[15px] leading-relaxed text-ink-soft">

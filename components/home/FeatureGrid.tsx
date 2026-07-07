@@ -1,5 +1,6 @@
 import Section from "../layout/Section";
 import FeatureCard from "../ui/FeatureCard";
+import TiltCard from "../ui/TiltCard";
 import Reveal from "../ui/Reveal";
 
 const FEATURES = [
@@ -43,13 +44,13 @@ const FEATURES = [
 
 export default function FeatureGrid() {
   return (
-    <Section id="recursos">
+    <Section id="recursos" glow>
       <Reveal>
         <div className="max-w-[560px]">
           <p className="font-mono text-[12px] uppercase tracking-wide text-primary-deep">
             Recursos
           </p>
-          <h2 className="mt-4 text-balance font-display text-[32px] font-semibold tracking-tight text-ink md:text-[40px]">
+          <h2 className="mt-4 text-balance font-display text-[clamp(1.75rem,1.4rem+1.6vw,2.5rem)] font-semibold tracking-tight text-ink">
             Tudo o que rege sua evolução, em um só lugar.
           </h2>
         </div>
@@ -58,7 +59,9 @@ export default function FeatureGrid() {
       <div className="mt-16 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {FEATURES.map((f, i) => (
           <Reveal key={f.index} delay={i * 70}>
-            <FeatureCard {...f} />
+            <TiltCard className="h-full">
+              <FeatureCard {...f} />
+            </TiltCard>
           </Reveal>
         ))}
       </div>
